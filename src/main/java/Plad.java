@@ -1,16 +1,16 @@
-public class Horzontal {
+public class Plad {
     public static void main(String[] args) {
-        String [][] lines = new String[11][11];
+        String [][] flannel = new String[11][11];
 
-        for(int p = 0; p < lines.length; p++){
-            for(int u = 0; u < lines[p].length; u++){
-                if(p % 2 == 0){
-                lines[p][u] = "🐐";
+        for(int p = 0; p < flannel.length; p++){
+            for(int u = 0; u < flannel[p].length; u++){
+                if(p % 2 == 0 && u % 2 == 0){
+                flannel[p][u] = "🦖";
             } else
-                lines[p][u] = "🐏";
+                flannel[p][u] = "🦕";
             }
         }
-        print2d(lines);
+        print2d(flannel);
     }
 public static void print2d(String[][] array){
 

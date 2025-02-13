@@ -5,9 +5,9 @@ public class Vertical {
         for(int p = 0; p < lines.length; p++){
             for(int u = 0; u < lines[p].length; u++){
                 if(u % 2 == 0){
-                lines[p][u] = "🦈";
+                lines[p][u] = "🚀";
             } else
-                lines[p][u] = "🐋";
+                lines[p][u] = "⭐";
             }
         }
         print2d(lines);
