@@ -1,36 +1,41 @@
 public class Argyle {
+
     public static void main(String[] args) {
-        String [][] arg = new String[11][11];
+        String [][] fancy = new String [11][11];
 
-        for(int p = 0; p < arg.length; p++){
-            for(int u = 0; u < arg[p].length; u++){
-                arg[p][u] = "🕷️";
-                if(p == u){
-                    arg[p][u] = "🦇";
+        for(int p = 0; p < fancy.length; p++){
+            for(int u = 0; u < fancy[p].length; u ++){
+                // start by setting shell by default
+                fancy[p][u] = "🦇";
+
+                // draw diagonal
+                if (u == p) {
+                    fancy[p][u] = "☠️";
                 }
-                if(p + u == arg.length - 1){
-                    arg[p][u] = "🦇";
+                if (p + u == fancy.length - 1){
+                    fancy[p][u] = "☠️";
                 }
-        }
-    }
-     for(int p = 0; p < arg.length/2 + 1; p++) {
-            arg[p][arg.length/2 + p] = "🕷️";
-            arg[p][arg.length/2 - p] = "🕷️";
-
-           arg[arg.length - 1 - p][arg.length/2 + p] = "🕷️";
-           arg[arg.length - 1 - p][arg.length/2 - p] = "🕷️";    
-     }
-        print2d(arg);
-    }
-
-
-public static void print2d(String[][] array){
-
-    for(int p = 0; p < array.length; p++){
-        for(int u = 0; u < array[p].length; u++){
-            System.out.print(array[p][u]);
             }
-            System.out.println();
-        }    
+        }
+        // cross is done - draw diamond
+        for(int p = 0; p < fancy.length/2 + 1; p ++) {
+            fancy[p][fancy.length/2 - p] = "☠️";
+            fancy[p][fancy.length/2 + p] = "☠️";
+
+            // lower half
+           fancy[fancy.length - 1 - p][fancy.length/2 + p] = "☠️";
+           fancy[fancy.length - 1 - p][fancy.length/2 - p] = "☠️";
+        }
+        print2d(fancy);
+    }
+
+    public static void print2d(String[][] array){
+
+        for(int x = 0; x < array.length; x++){
+            for(int y = 0; y < array[x].length; y++){
+                System.out.print(array[x][y]); 
+            }
+            System.out.println(); 
+        }
     }
 }
