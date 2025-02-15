@@ -5,10 +5,9 @@ public class Argyle {
 
         for(int p = 0; p < fancy.length; p++){
             for(int u = 0; u < fancy[p].length; u ++){
-                // start by setting shell by default
+                
                 fancy[p][u] = "🦇";
 
-                // draw diagonal
                 if (u == p) {
                     fancy[p][u] = "☠️";
                 }
@@ -17,12 +16,11 @@ public class Argyle {
                 }
             }
         }
-        // cross is done - draw diamond
         for(int p = 0; p < fancy.length/2 + 1; p ++) {
             fancy[p][fancy.length/2 - p] = "☠️";
             fancy[p][fancy.length/2 + p] = "☠️";
 
-            // lower half
+            
            fancy[fancy.length - 1 - p][fancy.length/2 + p] = "☠️";
            fancy[fancy.length - 1 - p][fancy.length/2 - p] = "☠️";
         }
